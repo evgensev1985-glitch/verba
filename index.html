@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Meta -->
+  <title>Верба Глэмпинг Ульяновск | Отдых на природе с баней и рыбалкой</title>
+  <meta name="description" content="Глэмпинг «Верба» в 60 км от Ульяновска: комфортабельные домики, баня с панорамным видом, горячая купель, рыбалка, уединение. Круглогодичный отдых на природе." />
+  <meta name="keywords" content="глэмпинг, ульяновск, отдых на природе, баня, купель, рыбалка, спа, верба" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="RU-ULY" />
+  <meta name="geo.placename" content="Кадыковка" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Верба Глэмпинг — где природа встречается с комфортом" />
+  <meta property="og:description" content="Уединённый отдых в 60 км от Ульяновска: баня с панорамным видом, горячая купель под звёздами и рыбалка." />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta property="og:url" content="https://v-glamp.ru" />
+  
+  <!-- Favicon (inline SVG fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --color-bg: #F8F5F0; --color-bg-alt: #FFFFFF;
+      --color-primary: #2C5F2D; --color-primary-dark: #1E4520;
+      --color-secondary: #8B7355; --color-text: #1A1A1A;
+      --color-text-muted: #666666; --color-border: #E0D9D0; --color-white: #FFFFFF;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Manrope', var(--font-body); --font-accent: 'Playfair Display', serif;
+      --text-xs: 0.75rem; --text-sm: 0.875rem; --text-base: 1rem; --text-lg: 1.125rem;
+      --text-xl: 1.25rem; --text-2xl: 1.5rem; --text-3xl: 1.875rem; --text-4xl: 2.25rem; --text-5xl: 3rem;
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
+      --space-6: 1.5rem; --space-8: 2rem; --space-12: 3rem; --space-16: 4rem;
+      --radius-sm: 0.25rem; --radius-md: 0.5rem; --radius-lg: 1rem; --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05); --shadow-md: 0 4px 12px rgba(0,0,0,0.08); --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+      --transition-fast: 150ms ease; --transition-base: 300ms ease; --transition-slow: 500ms ease;
+      --container-max: 1200px; --header-height: 72px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
+    body { font-family: var(--font-body); font-size: var(--text-base); line-height: 1.6; color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; background: var(--color-border); border-radius: var(--radius-md); }
+    a { color: inherit; text-decoration: none; transition: color var(--transition-fast); }
+    ul { list-style: none; } button { font: inherit; background: none; border: none; cursor: pointer; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--color-primary); color: var(--color-white); padding: var(--space-2) var(--space-4); z-index: 1000; transition: top var(--transition-fast); }
+    .skip-link:focus { top: 0; }
+    .container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-4); }
+    .section { padding: var(--space-12) 0; }
+    .section__title { font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 700; color: var(--color-primary); text-align: center; margin-bottom: var(--space-4); }
+    .section__subtitle { text-align: center; color: var(--color-text-muted); font-size: var(--text-lg); max-width: 600px; margin: 0 auto var(--space-8); }
+    .text-sm { font-size: var(--text-sm); } .text-muted { color: var(--color-text-muted); }
+    .code { background: var(--color-border); padding: 2px 6px; border-radius: var(--radius-sm); font-family: monospace; }
+    .icon { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; color: var(--color-secondary); }
+    .btn { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); font-weight: 500; font-size: var(--text-base); transition: all var(--transition-fast); text-align: center; }
+    .btn--primary { background: var(--color-primary); color: var(--color-white); }
+    .btn--primary:hover { background: var(--color-primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+    .btn--outline:hover { background: var(--color-primary); color: var(--color-white); }
+    .header { position: sticky; top: 0; z-index: 100; background: var(--color-bg-alt); box-shadow: var(--shadow-sm); height: var(--header-height); transition: box-shadow var(--transition-fast); }
+    .header--scrolled { box-shadow: var(--shadow-md); }
+    .header__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .logo { font-family: var(--font-heading); font-weight: 700; font-size: var(--text-xl); color: var(--color-primary); display: flex; align-items: center; gap: var(--space-2); }
+    .nav__toggle { display: none; flex-direction: column; justify-content: center; align-items: center; width: 32px; height: 32px; }
+    .nav__toggle-line, .nav__toggle-line::before, .nav__toggle-line::after { display: block; width: 22px; height: 2px; background: var(--color-text); border-radius: 2px; transition: transform var(--transition-fast), opacity var(--transition-fast); }
+    .nav__toggle-line::before, .nav__toggle-line::after { content: ''; position: absolute; }
+    .nav__toggle-line::before { transform: translateY(-7px); }
+    .nav__toggle-line::after { transform: translateY(7px); }
+    .nav__menu { display: flex; gap: var(--space-6); align-items: center; }
+    .nav__link { font-weight: 500; font-size: var(--text-sm); color: var(--color-text); position: relative; padding: var(--space-2) 0; }
+    .nav__link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-primary); transition: width var(--transition-fast); }
+    .nav__link:hover::after, .nav__link:focus::after { width: 100%; }
+    .header__phone { display: flex; align-items: center; gap: var(--space-2); font-weight: 600; color: var(--color-primary); }
+    .header__phone:hover { color: var(--color-primary-dark); }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--color-white); overflow: hidden; }
+    .hero__bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(44,95,45,0.85), rgba(139,115,85,0.75)), linear-gradient(45deg, #2C5F2D, #8B7355); z-index: -1; }
+    .hero__content { max-width: 800px; padding: var(--space-8); animation: fadeInUp 0.8s ease; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero__title { font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 700; margin-bottom: var(--space-4); line-height: 1.1; }
+    .hero__subtitle { display: block; font-family: var(--font-accent); font-style: italic; font-size: var(--text-2xl); font-weight: 400; margin-top: var(--space-2); opacity: 0.95; }
+    .hero__description { font-size: var(--text-lg); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero__actions { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+    .hero__scroll { position: absolute; bottom: var(--space-8); left: 50%; transform: translateX(-50%); animation: bounce 2s infinite; }
+    @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); } 40% { transform: translateX(-50%) translateY(-10px); } 60% { transform: translateX(-50%) translateY(-5px); } }
+    .hero__scroll a { color: var(--color-white); opacity: 0.8; transition: opacity var(--transition-fast); }
+    .hero__scroll a:hover { opacity: 1; }
+    .about__grid, .spa__grid, .contacts__grid { display: grid; gap: var(--space-8); align-items: center; }
+    .about__lead { font-size: var(--text-lg); font-weight: 500; margin-bottom: var(--space-6); color: var(--color-primary); }
+    .features-list { display: grid; gap: var(--space-4); }
+    .features-list__item { display: flex; align-items: flex-start; gap: var(--space-3); }
+    .features-list__item .icon { flex-shrink: 0; margin-top: 2px; }
+    .about__image img, .spa__image img { border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; min-height: 280px; object-fit: cover; }
+    .cards-grid, .offers__grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background: var(--color-bg-alt); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), box-shadow var(--transition-fast); position: relative; }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .card__image { position: relative; aspect-ratio: 4/3; overflow: hidden; background: linear-gradient(135deg, #e0d9d0, #f8f5f0); }
+    .card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+    .card:hover .card__image img { transform: scale(1.05); }
+    .card__badge { position: absolute; top: var(--space-3); right: var(--space-3); background: var(--color-primary); color: var(--color-white); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600; z-index: 1; }
+    .card__content { padding: var(--space-5); }
+    .card__title { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-2); color: var(--color-primary); }
+    .card__desc { color: var(--color-text-muted); margin-bottom: var(--space-4); }
+    .card__amenities { display: grid; gap: var(--space-2); font-size: var(--text-sm); }
+    .card__amenities li { display: flex; align-items: center; gap: var(--space-2); }
+    .spa { background: linear-gradient(to bottom, var(--color-bg), #F0EBE4); }
+    .spa__subtitle { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 600; color: var(--color-primary); margin: var(--space-6) 0 var(--space-3); }
+    .spa__packages { margin-top: var(--space-6); padding: var(--space-4); background: var(--color-bg-alt); border-radius: var(--radius-md); border-left: 4px solid var(--color-secondary); }
+    .spa__packages h4 { margin-bottom: var(--space-3); font-weight: 600; }
+    .spa__packages ul { display: grid; gap: var(--space-2); }
+    .activities__grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .activity-card { text-align: center; padding: var(--space-6); background: var(--color-bg-alt); border-radius: var(--radius-lg); transition: transform var(--transition-fast); }
+    .activity-card:hover { transform: translateY(-4px); }
+    .activity-card__icon { color: var(--color-secondary); margin-bottom: var(--space-4); display: flex; justify-content: center; }
+    .activity-card h3 { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--space-3); color: var(--color-primary); }
+    .activity-card p { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .offer-card { background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-lg); border: 2px solid var(--color-border); position: relative; transition: border-color var(--transition-fast); }
+    .offer-card:hover { border-color: var(--color-primary); }
+    .offer-card__badge { position: absolute; top: -12px; left: var(--space-4); background: var(--color-secondary); color: var(--color-white); padding: var(--space-1) var(--space-4); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600; }
+    .offer-card h3 { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 600; margin: var(--space-4) 0 var(--space-2); color: var(--color-primary); }
+    .offer-card p { color: var(--color-text-muted); }
+    .offer-card p strong { color: var(--color-primary); font-weight: 700; }
+    .gallery__grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .gallery__item { display: block; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/3; position: relative; }
+    .gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+    .gallery__item:hover img { transform: scale(1.08); }
+    .gallery__item::after { content: '🔍'; position: absolute; inset: 0; background: rgba(44,95,45,0.7); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; opacity: 0; transition: opacity var(--transition-fast); color: white; }
+    .gallery__item:hover::after { opacity: 1; }
+    .reviews__slider { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: var(--space-8); }
+    .review-card { background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-lg); border-left: 4px solid var(--color-secondary); }
+    .review-card__rating { display: flex; gap: 4px; margin-bottom: var(--space-3); color: #F39C12; }
+    .review-card__text { font-style: italic; margin-bottom: var(--space-4); line-height: 1.7; }
+    .review-card__author { font-weight: 500; color: var(--color-primary); }
+    .reviews__cta { text-align: center; padding-top: var(--space-6); border-top: 1px solid var(--color-border); }
+    .social-links { display: flex; gap: var(--space-4); justify-content: center; margin-top: var(--space-3); }
+    .social-link { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--radius-full); font-weight: 600; color: var(--color-white); transition: transform var(--transition-fast); }
+    .social-link:hover { transform: translateY(-3px); }
+    .social-link.vk { background: #0077FF; } .social-link.telegram { background: #0088CC; }
+    .contact-item { display: flex; gap: var(--space-4); padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item .icon { color: var(--color-primary); flex-shrink: 0; margin-top: 4px; }
+    .contact-item strong { display: block; font-weight: 600; margin-bottom: var(--space-1); }
+    .contact-item .link { color: var(--color-primary); font-weight: 500; }
+    .contact-item .link:hover { text-decoration: underline; }
+    .map-placeholder { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: linear-gradient(135deg, #e0d9d0, #f8f5f0); min-height: 280px; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); }
+    .map-link { position: absolute; bottom: var(--space-4); left: 50%; transform: translateX(-50%); background: var(--color-primary); color: var(--color-white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 500; font-size: var(--text-sm); transition: background var(--transition-fast); z-index: 2; }
+    .map-link:hover { background: var(--color-primary-dark); }
+    .footer { background: var(--color-primary-dark); color: var(--color-white); padding: var(--space-12) 0 var(--space-6); }
+    .footer__inner { display: grid; gap: var(--space-6); text-align: center; }
+    .footer__brand { font-family: var(--font-heading); font-weight: 700; font-size: var(--text-xl); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+    .footer__slogan { font-family: var(--font-accent); font-style: italic; opacity: 0.9; margin-bottom: var(--space-6); }
+    .footer__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4) var(--space-6); }
+    .footer__nav a { opacity: 0.9; transition: opacity var(--transition-fast); }
+    .footer__nav a:hover { opacity: 1; text-decoration: underline; }
+    .footer__social { display: flex; justify-content: center; gap: var(--space-4); }
+    .social-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--radius-full); background: rgba(255,255,255,0.15); font-weight: 600; font-size: var(--text-sm); transition: background var(--transition-fast); }
+    .social-icon:hover { background: rgba(255,255,255,0.25); }
+    .footer__copyright { padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,0.15); font-size: var(--text-sm); opacity: 0.8; }
+    @media (min-width: 768px) {
+      .section { padding: var(--space-16) 0; }
+      .section__title { font-size: var(--text-4xl); }
+      .hero__title { font-size: clamp(2.5rem, 5vw, 4rem); }
+      .about__grid, .spa__grid, .contacts__grid { grid-template-columns: 1fr 1fr; }
+      .about__image, .spa__image { order: 2; }
+      .footer__inner { grid-template-columns: 1fr auto 1fr; text-align: left; }
+      .footer__brand { align-items: flex-start; }
+      .footer__copyright { grid-column: 1 / -1; text-align: center; padding-top: var(--space-8); }
+    }
+    @media (min-width: 1024px) {
+      .cards-grid, .offers__grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 767px) {
+      .nav__toggle { display: flex; }
+      .nav__menu { position: fixed; top: var(--header-height); left: 0; right: 0; background: var(--color-bg-alt); flex-direction: column; padding: var(--space-6); gap: var(--space-4); box-shadow: var(--shadow-md); transform: translateY(-150%); transition: transform var(--transition-base); z-index: 99; }
+      .nav__menu.active { transform: translateY(0); }
+      .nav__toggle[aria-expanded="true"] .nav__toggle-line { background: transparent; }
+      .nav__toggle[aria-expanded="true"] .nav__toggle-line::before { transform: rotate(45deg) translate(5px, 5px); }
+      .nav__toggle[aria-expanded="true"] .nav__toggle-line::after { transform: rotate(-45deg) translate(5px, -5px); }
+      .header__phone { display: none; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 300px; justify-content: center; }
+    }
+    @media print {
+      .header, .hero__scroll, .footer__social, .nav__toggle { display: none !important; }
+      body { background: white; color: black; font-size: 12pt; }
+      .section { padding: 20pt 0; page-break-inside: avoid; }
+      a[href]::after { content: " (" attr(href) ")"; font-size: 0.9em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --color-bg: #1a1a1a; --color-bg-alt: #252525; --color-text: #f0f0f0; --color-text-muted: #b0b0b0; --color-border: #404040; }
+      .card, .offer-card, .review-card, .activity-card { background: var(--color-bg-alt); }
+      .header { background: var(--color-bg-alt); }
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LodgingBusiness","name":"Верба Глэмпинг","description":"Премиум-глэмпинг в Ульяновской области: комфортабельные домики, СПА, рыбалка, уединение на природе","address":{"@type":"PostalAddress","streetAddress":"с. Кадыковка","addressLocality":"Майнский район","addressRegion":"Ульяновская область","addressCountry":"RU"},"geo":{"@type":"GeoCoordinates","latitude":54.1234,"longitude":48.5678},"url":"https://v-glamp.ru","telephone":"+79372702200","email":"verbaglamp@mail.ru","priceRange":"₽₽₽","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}}
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Перейти к основному контенту</a>
+
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Верба Глэмпинг — главная">🌿 Верба Глэмпинг</a>
+      <nav class="nav" role="navigation" aria-label="Основная навигация">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Открыть меню"><span class="nav__toggle-line"></span></button>
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="#about" class="nav__link">О глэмпинге</a></li>
+          <li><a href="#rooms" class="nav__link">Проживание</a></li>
+          <li><a href="#spa" class="nav__link">СПА</a></li>
+          <li><a href="#activities" class="nav__link">Активности</a></li>
+          <li><a href="#offers" class="nav__link">Акции</a></li>
+          <li><a href="#gallery" class="nav__link">Галерея</a></li>
+          <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+79372702200" class="header__phone" aria-label="Позвонить">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+7 (937) 270-22-00</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" role="img" aria-label="Природа глэмпинга"></div>
+      <div class="container hero__content">
+        <h1 id="hero-title" class="hero__title">Верба Глэмпинг<span class="hero__subtitle">где природа встречается с комфортом</span></h1>
+        <p class="hero__description">Уединённый отдых в 60 км от Ульяновска: баня с панорамным видом, горячая купель под звёздами и рыбалка в собственном пруду</p>
+        <div class="hero__actions">
+          <a href="tel:+79372702200" class="btn btn--primary"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Забронировать по телефону</a>
+          <a href="#about" class="btn btn--outline">Узнать подробнее</a>
+        </div>
+      </div>
+      <div class="hero__scroll"><a href="#about" aria-label="Прокрутить вниз"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a></div>
+    </section>
+
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section__title">О глэмпинге</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__lead">«Верба» — это премиум-отдых на природе, где вы получаете комфорт отеля и атмосферу дикой природы одновременно.</p>
+            <ul class="features-list">
+              <li class="features-list__item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Закрытая территория — только вы и природа</span></li>
+              <li class="features-list__item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Индивидуальные зоны — никакой суеты</span></li>
+              <li class="features-list__item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M1 12h4M19 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg><span>Круглогодичный формат — зима и лето одинаково прекрасны</span></li>
+              <li class="features-list__item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 16v-4M12 8h.01"/></svg><span>СПА-ритуалы — баня и купель для полного расслабления</span></li>
+            </ul>
+          </div>
+          <div class="about__image"><img src="assets/img/about-nature.webp" alt="Природа вокруг глэмпинга" width="600" height="400" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rooms" class="section rooms" aria-labelledby="rooms-title">
+      <div class="container">
+        <h2 id="rooms-title" class="section__title">Проживание</h2>
+        <p class="section__subtitle">Комфортабельные модули с панорамным остеклением и всеми удобствами</p>
+        <div class="cards-grid">
+          <article class="card"><div class="card__image"><img src="assets/img/room-standard.webp" alt="Стандартный модуль" width="400" height="300" loading="lazy" /></div><div class="card__content"><h3 class="card__title">Стандарт</h3><p class="card__desc">Уютный модуль для пары с двуспальной кроватью, мини-кухней и террасой</p><ul class="card__amenities"><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2"/><path d="M3 21h18"/></svg> Двуспальная кровать</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h.01"/><path d="M8 4h.01"/><path d="M12 4h.01"/><path d="M16 4h.01"/><path d="M20 4h.01"/></svg> Санузел с душем</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/></svg> Мини-кухня</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8"/><path d="M5 12l7-7 7 7"/></svg> Личная терраса</li></ul></div></article>
+          <article class="card"><div class="card__badge">Популярный</div><div class="card__image"><img src="assets/img/room-comfort.webp" alt="Комфорт модуль" width="400" height="300" loading="lazy" /></div><div class="card__content"><h3 class="card__title">Комфорт +</h3><p class="card__desc">Просторный модуль с камином, ванной и увеличенной террасой</p><ul class="card__amenities"><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0 1.1.2 2.2.5 3.3z"/></svg> Камин</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1Z"/></svg> Ванна с видом</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg> Smart TV</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg> Кофемашина</li></ul></div></article>
+          <article class="card"><div class="card__image"><img src="assets/img/room-family.webp" alt="Семейный модуль" width="400" height="300" loading="lazy" /></div><div class="card__content"><h3 class="card__title">Семейный</h3><p class="card__desc">Двухкомнатный модуль для семьи с детьми или небольшой компании</p><ul class="card__amenities"><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg> До 4 гостей</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/></svg> Полноценная кухня</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Игровая зона</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Большая веранда</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="spa" class="section spa" aria-labelledby="spa-title">
+      <div class="container">
+        <h2 id="spa-title" class="section__title">СПА-зона</h2>
+        <p class="section__subtitle">Релакс с видом на природу</p>
+        <div class="spa__grid">
+          <div class="spa__content">
+            <h3 class="spa__subtitle">Баня с панорамным окном</h3>
+            <p>Настоящая русская баня на дровах с огромным окном, выходящим на пруд. Парьтесь, наблюдая за закатом или падающим снегом.</p>
+            <h3 class="spa__subtitle">Горячая купель под открытым небом</h3>
+            <p>Деревянная купель с подогревом — идеальное завершение дня. Звёзды, тишина и тёплая вода.</p>
+            <div class="spa__packages"><h4>Пакеты услуг:</h4><ul><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <strong>2 часа</strong> — баня + купель</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> <strong>СПА-ритуал</strong> — веники, чай, ароматерапия</li><li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8v4H8zM12 6v14M12 20l4 2M12 20l-4 2"/></svg> <strong>Романтик</strong> — шампанское, фрукты, свечи</li></ul></div>
+          </div>
+          <div class="spa__image"><img src="assets/img/spa-banya.webp" alt="Баня с панорамным окном" width="600" height="400" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" class="section activities" aria-labelledby="activities-title">
+      <div class="container">
+        <h2 id="activities-title" class="section__title">Активности</h2>
+        <p class="section__subtitle">Чем заняться в «Вербе»</p>
+        <div class="activities__grid">
+          <article class="activity-card"><div class="activity-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l4-4 4 4"/><path d="M10 5v12"/><path d="M20 17H4"/><path d="M20 21H4"/></svg></div><h3>Рыбалка</h3><p>Собственный зарыбленный пруд: карп, толстолобик, амур. Снасти предоставляются.</p></article>
+          <article class="activity-card"><div class="activity-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4V4h11a1 1 0 0 1 1 1v1Z"/><path d="M4 11h11l3 6H7"/></svg></div><h3>Прогулки</h3><p>Электровелосипеды и квадроциклы для исследования окрестных лесов и полей.</p></article>
+          <article class="activity-card"><div class="activity-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M1 12h4M19 12h4"/></svg></div><h3>Астрономия</h3><p>Наблюдение за звёздами с профессиональным телескопом в безлунные ночи.</p></article>
+          <article class="activity-card"><div class="activity-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0 1.1.2 2.2.5 3.3z"/></svg></div><h3>Вечера у костра</h3><p>Мангальные зоны, готовые дрова, маршмэллоу — создайте атмосферу уюта.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers" class="section offers" aria-labelledby="offers-title">
+      <div class="container">
+        <h2 id="offers-title" class="section__title">Акции и предложения</h2>
+        <div class="offers__grid">
+          <article class="offer-card"><div class="offer-card__badge">Именинникам</div><h3>Скидка на проживание</h3><p><strong>20%</strong> в будни и <strong>10%</strong> в выходные при предъявлении паспорта за 3 дня до/после ДР</p></article>
+          <article class="offer-card"><div class="offer-card__badge">Выгодно</div><h3>«1+1=3»</h3><p>Третий день проживания в подарок при бронировании от 2 дней (вс-чт)</p></article>
+          <article class="offer-card"><div class="offer-card__badge">Длительный отдых</div><h3>«Третий день за полцены»</h3><p>Скидка 50% на третий день при бронировании от 3 суток</p></article>
+          <article class="offer-card"><div class="offer-card__badge">Онлайн</div><h3>−3% за подписку</h3><p>Подпишитесь на наши соцсети и получите скидку при бронировании</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" class="section__title">Галерея</h2>
+        <div class="gallery__grid">
+          <a href="assets/img/gallery-1-full.jpg" class="gallery__item" data-lightbox="gallery"><img src="assets/img/gallery-1-thumb.webp" alt="Рассвет над прудом" width="400" height="300" loading="lazy" /></a>
+          <a href="assets/img/gallery-2-full.jpg" class="gallery__item" data-lightbox="gallery"><img src="assets/img/gallery-2-thumb.webp" alt="Интерьер модуля" width="400" height="300" loading="lazy" /></a>
+          <a href="assets/img/gallery-3-full.jpg" class="gallery__item" data-lightbox="gallery"><img src="assets/img/gallery-3-thumb.webp" alt="Баня вечером" width="400" height="300" loading="lazy" /></a>
+          <a href="assets/img/gallery-4-full.jpg" class="gallery__item" data-lightbox="gallery"><img src="assets/img/gallery-4-thumb.webp" alt="Купель под звёздами" width="400" height="300" loading="lazy" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 id="reviews-title" class="section__title">Отзывы гостей</h2>
+        <div class="reviews__slider">
+          <blockquote class="review-card"><div class="review-card__rating" aria-label="5 звезд"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><p class="review-card__text">«Невероятное место! Баня с видом на пруд — это что-то волшебное. Обязательно вернёмся зимой!»</p><footer class="review-card__author">— Анна и Дмитрий, Ульяновск</footer></blockquote>
+          <blockquote class="review-card"><div class="review-card__rating" aria-label="5 звезд"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><p class="review-card__text">«Отдыхали с детьми. Всё чисто, уютно, персонал внимательный. Рыбалка удалась!»</p><footer class="review-card__author">— Семья Ивановых, Самара</footer></blockquote>
+        </div>
+        <div class="reviews__cta"><p>Больше отзывов в наших соцсетях:</p><div class="social-links"><a href="https://vk.com/verbaglamp" class="social-link vk" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a><a href="https://t.me/verbaglamp" class="social-link telegram" aria-label="Telegram" target="_blank" rel="noopener">TG</a></div></div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <h2 id="contacts-title" class="section__title">Контакты</h2>
+        <div class="contacts__grid">
+          <div class="contacts__info">
+            <div class="contact-item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Адрес</strong><p>Ульяновская область, Майнский район, с. Кадыковка</p><p class="text-sm text-muted">60 км от Ульяновска</p></div></div>
+            <div class="contact-item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong>Телефон</strong><a href="tel:+79372702200" class="link">+7 (937) 270-22-00</a><p class="text-sm text-muted">Ежедневно, 9:00–21:00</p></div></div>
+            <div class="contact-item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>Почта</strong><a href="mailto:verbaglamp@mail.ru" class="link">verbaglamp@mail.ru</a></div></div>
+            <div class="contact-item"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div><strong>Как добраться</strong><p>Навигатор: <code class="code">с. Кадыковка, Майнский район</code></p><a href="https://yandex.ru/maps/?text=Верба+глэмпинг+Кадыковка" class="link" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a></div></div>
+          </div>
+          <div class="contacts__map"><div class="map-placeholder" role="img" aria-label="Карта расположения">📍 Карта загружается...<a href="https://yandex.ru/maps/?text=Верба+глэмпинг+Кадыковка" class="map-link" target="_blank" rel="noopener">Открыть интерактивную карту</a></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">🌿 Верба Глэмпинг<p class="footer__slogan">Отдых, который остаётся в сердце</p></div>
+      <nav class="footer__nav" aria-label="Дополнительная навигация"><a href="#about">О нас</a><a href="#rooms">Проживание</a><a href="#spa">СПА</a><a href="#activities">Активности</a><a href="#offers">Акции</a><a href="#privacy-policy">Политика конфиденциальности</a></nav>
+      <div class="footer__social"><a href="https://vk.com/verbaglamp" class="social-icon vk" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a><a href="https://t.me/verbaglamp" class="social-icon telegram" aria-label="Telegram" target="_blank" rel="noopener">TG</a></div>
+      <div class="footer__copyright"><p>&copy; <time datetime="2026">2026</time> Верба Глэмпинг. Все права защищены.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.querySelector('.nav__toggle');
+      const navMenu = document.querySelector('.nav__menu');
+      const header = document.querySelector('.header');
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = navMenu.classList.toggle('active');
+          navToggle.setAttribute('aria-expanded', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; });
+        });
+      }
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href'); if (targetId === '#') return;
+          const target = document.querySelector(targetId);
+          if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight, behavior: 'smooth' }); history.pushState(null, null, targetId); }
+        });
+      });
+      window.addEventListener('scroll', () => header.classList.toggle('header--scrolled', window.pageYOffset > 50), { passive: true });
+      const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+      document.querySelectorAll('.section').forEach(sec => { sec.style.opacity = '0'; sec.style.transform = 'translateY(20px)'; sec.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(sec); });
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => { if (typeof ym === 'function') ym(00000000, 'reachGoal', 'phone_click'); if (window.gtag) gtag('event', 'click', { event_category: 'phone' }); }));
+      let lastTouchEnd = 0; document.addEventListener('touchend', (e) => { if (Date.now() - lastTouchEnd <= 300) e.preventDefault(); lastTouchEnd = Date.now(); }, { passive: false });
+    });
+  </script>
+</body>
+</html>
