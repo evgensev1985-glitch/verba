@@ -358,6 +358,55 @@
     </section>
   </main>
 
+  <!-- Политика конфиденциальности -->
+  <section id="privacy-policy" class="section" aria-labelledby="privacy-title">
+    <div class="container">
+      <h2 id="privacy-title" class="section__title">Политика конфиденциальности</h2>
+      <p class="section__subtitle">Мы ценим вашу конфиденциальность и защищаем персональные данные</p>
+      
+      <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+        <h3 style="font-family: var(--font-heading); font-size: var(--text-xl); color: var(--color-primary); margin: var(--space-6) 0 var(--space-3);">1. Общие положения</h3>
+        <p style="margin-bottom: var(--space-4);">Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые глэмпингом «Верба» (далее — Оператор).</p>
+        
+        <h3 style="font-family: var(--font-heading); font-size: var(--text-xl); color: var(--color-primary); margin: var(--space-6) 0 var(--space-3);">2. Сбор и обработка данных</h3>
+        <p style="margin-bottom: var(--space-4);">Оператор обрабатывает следующие персональные данные Пользователя:</p>
+        <ul style="list-style: disc; padding-left: var(--space-6); margin-bottom: var(--space-4);">
+          <li>Фамилия, имя, отчество</li>
+          <li>Номер телефона</li>
+          <li>Адрес электронной почты</li>
+          <li>Даты заезда и выезда</li>
+        </ul>
+        <p style="margin-bottom: var(--space-4);">Цели обработки персональных данных:</p>
+        <ul style="list-style: disc; padding-left: var(--space-6); margin-bottom: var(--space-4);">
+          <li>Бронирование и предоставление услуг размещения</li>
+          <li>Связь с клиентом для уточнения деталей бронирования</li>
+          <li>Информирование об акциях и специальных предложениях (с согласия клиента)</li>
+        </ul>
+        
+        <h3 style="font-family: var(--font-heading); font-size: var(--text-xl); color: var(--color-primary); margin: var(--space-6) 0 var(--space-3);">3. Защита данных</h3>
+        <p style="margin-bottom: var(--space-4);">Оператор обеспечивает защиту персональных данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения посредством:</p>
+        <ul style="list-style: disc; padding-left: var(--space-6); margin-bottom: var(--space-4);">
+          <li>Использования защищённых каналов связи</li>
+          <li>Ограничения доступа к данным</li>
+          <li>Регулярного обновления систем безопасности</li>
+        </ul>
+        
+        <h3 style="font-family: var(--font-heading); font-size: var(--text-xl); color: var(--color-primary); margin: var(--space-6) 0 var(--space-3);">4. Права пользователя</h3>
+        <p style="margin-bottom: var(--space-4);">Пользователь имеет право:</p>
+        <ul style="list-style: disc; padding-left: var(--space-6); margin-bottom: var(--space-4);">
+          <li>Получить информацию об обработке своих персональных данных</li>
+          <li>Требовать уточнения, блокирования или уничтожения своих данных</li>
+          <li>Отозвать согласие на обработку персональных данных</li>
+        </ul>
+        
+        <h3 style="font-family: var(--font-heading); font-size: var(--text-xl); color: var(--color-primary); margin: var(--space-6) 0 var(--space-3);">5. Контакты</h3>
+        <p style="margin-bottom: var(--space-4);">По вопросам обработки персональных данных обращайтесь: <a href="tel:+79991234567" class="link">+7 (999) 123-45-67</a> или <a href="mailto:info@v-glamp.ru" class="link">info@v-glamp.ru</a></p>
+        
+        <p style="margin-top: var(--space-8); font-size: var(--text-sm); color: var(--color-text-muted);">Последнее обновление: <time datetime="2026-01-01">1 января 2026 года</time></p>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">🌿 Верба Глэмпинг<p class="footer__slogan">Отдых, который остаётся в сердце</p></div>
@@ -392,7 +441,7 @@
       window.addEventListener('scroll', () => header.classList.toggle('header--scrolled', window.pageYOffset > 50), { passive: true });
       const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
       document.querySelectorAll('.section').forEach(sec => { sec.style.opacity = '0'; sec.style.transform = 'translateY(20px)'; sec.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(sec); });
-      document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => { if (typeof ym === 'function') ym(00000000, 'reachGoal', 'phone_click'); if (window.gtag) gtag('event', 'click', { event_category: 'phone' }); }));
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => { if (typeof ym === 'function') ym(XXXXXXX, 'reachGoal', 'phone_click'); if (window.gtag) gtag('event', 'click', { event_category: 'phone' }); }));
       let lastTouchEnd = 0; document.addEventListener('touchend', (e) => { if (Date.now() - lastTouchEnd <= 300) e.preventDefault(); lastTouchEnd = Date.now(); }, { passive: false });
     });
   </script>
