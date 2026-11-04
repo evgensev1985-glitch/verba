@@ -441,7 +441,7 @@
       window.addEventListener('scroll', () => header.classList.toggle('header--scrolled', window.pageYOffset > 50), { passive: true });
       const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
       document.querySelectorAll('.section').forEach(sec => { sec.style.opacity = '0'; sec.style.transform = 'translateY(20px)'; sec.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(sec); });
-      document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => { if (typeof ym === 'function') ym(XXXXXXX, 'reachGoal', 'phone_click'); if (window.gtag) gtag('event', 'click', { event_category: 'phone' }); }));
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => { /* TODO: подключить аналитику — при подключении раскомментировать: if (typeof ym === 'function') ym(номер_счётчика, 'reachGoal', 'phone_click'); if (window.gtag) gtag('event', 'click', { event_category: 'phone' }); */ }));
       let lastTouchEnd = 0; document.addEventListener('touchend', (e) => { if (Date.now() - lastTouchEnd <= 300) e.preventDefault(); lastTouchEnd = Date.now(); }, { passive: false });
     });
   </script>
